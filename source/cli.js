@@ -4,7 +4,7 @@ import {render} from 'ink';
 import meow from 'meow';
 import App from './app.js';
 
-import calculate from './utils/minacalc.js';
+import calculate from "./utils/minacalc.js"
 
 const cli = meow(
 	`

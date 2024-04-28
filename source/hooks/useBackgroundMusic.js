@@ -1,14 +1,15 @@
-import { Events, Memory, getCurrentPacket } from "../memory.js"
 import React, {useState, useEffect} from 'react';
 
+import useOsuMemory from "./useOsuMemory.js";
+
 export default function useBackgroundMusic() {
-    const [ state, setState ] = useState(getCurrentPacket()?.menu.bm)
+    const rawMemory = useOsuMemory()
+    const [ memory, setMemory ] = useState(rawMemory)
 
     useEffect(() => {
-        Memory.addListener(Events.SONG_CHANGE, packet => {
-            setState(packet.menu.bm)
-        })
-    }, [])
+        setMemory(rawMemory)
+    }, [ rawMemory?.menu.bm.md5 ])
 
-    return state
+    return memory?.menu.bm
 }
+

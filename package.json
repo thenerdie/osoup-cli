@@ -17,14 +17,17 @@
 	],
 	"dependencies": {
 		"@prisma/client": "^5.13.0",
+		"axios": "^1.6.8",
 		"gradient-string": "^2.0.2",
 		"ink": "^4.1.0",
 		"ink-big-text": "^2.0.0",
 		"ink-gradient": "^3.0.0",
 		"meow": "^11.0.0",
+		"osu-parsers": "^4.1.7",
 		"prisma": "^5.13.0",
 		"react": "^18.2.0",
-		"react-devtools": "^5.1.0"
+		"react-devtools": "^5.1.0",
+		"urlencode": "^2.0.0"
 	},
 	"devDependencies": {
 		"@babel/cli": "^7.21.0",
